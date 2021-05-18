@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SLO_Paging_Slip4" pageWidth="612" pageHeight="792" columnWidth="572" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ac548a6a-3d82-4d10-a68e-eded74419bcc">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<field name="Item_Title" class="java.lang.String">
+		<fieldDescription><![CDATA[v_b_title]]></fieldDescription>
+	</field>
+	<field name="Item_Author" class="java.lang.String">
+		<fieldDescription><![CDATA[v_b_author]]></fieldDescription>
+	</field>
+	<field name="Item_Publisher" class="java.lang.String">
+		<fieldDescription><![CDATA[v_b_pub]]></fieldDescription>
+	</field>
+	<field name="Item_Bib_Record_Id" class="java.lang.String">
+		<fieldDescription><![CDATA[bib_recid]]></fieldDescription>
+	</field>
+	<field name="Item_Edition" class="java.lang.String">
+		<fieldDescription><![CDATA[v_edition]]></fieldDescription>
+	</field>
+	<field name="Library_Address_Line1_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/g_return_addr1]]></fieldDescription>
+	</field>
+	<field name="Library_Address_Line2_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/g_return_addr2]]></fieldDescription>
+	</field>
+	<field name="Library_Address_Line3_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/g_return_addr3]]></fieldDescription>
+	</field>
+	<field name="Patron_Name_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/v_p_name]]></fieldDescription>
+	</field>
+	<field name="Patron_Address_Line1_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/g_patron_addr1]]></fieldDescription>
+	</field>
+	<field name="Patron_Address_Line2_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/g_patron_addr2]]></fieldDescription>
+	</field>
+	<field name="Patron_Address_Line3_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/g_patron_addr3]]></fieldDescription>
+	</field>
+	<field name="Item_Barcode" class="java.lang.String">
+		<fieldDescription><![CDATA[v_i_barcode]]></fieldDescription>
+	</field>
+	<field name="Item_Due_Date" class="java.lang.String">
+		<fieldDescription><![CDATA[f_i_duedate]]></fieldDescription>
+	</field>
+	<field name="Item_Location" class="java.lang.String">
+		<fieldDescription><![CDATA[f_i_location]]></fieldDescription>
+	</field>
+	<field name="Item_Call_Number" class="java.lang.String">
+		<fieldDescription><![CDATA[v_call_num]]></fieldDescription>
+	</field>
+	<field name="Item_ID" class="java.lang.String">
+		<fieldDescription><![CDATA[@id]]></fieldDescription>
+	</field>
+	<field name="Item_Checked_Out_Date" class="java.lang.String">
+		<fieldDescription><![CDATA[f_i_checkout_date]]></fieldDescription>
+	</field>
+	<field name="Text_Number_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/g_msg_num]]></fieldDescription>
+	</field>
+	<field name="Item_Pickup_Location" class="java.lang.String">
+		<fieldDescription><![CDATA[v_pickup_loc]]></fieldDescription>
+	</field>
+	<field name="Item_Pickup_By_Date" class="java.lang.String">
+		<fieldDescription><![CDATA[s_pickup_date]]></fieldDescription>
+	</field>
+	<field name="Item_Record_Id" class="java.lang.String">
+		<fieldDescription><![CDATA[item_recid]]></fieldDescription>
+	</field>
+	<field name="Patron_Name" class="java.lang.String">
+		<fieldDescription><![CDATA[v_p_name]]></fieldDescription>
+	</field>
+	<field name="Item_Location_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/f_i_location]]></fieldDescription>
+	</field>
+	<field name="Item_Pickup_Location_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/v_pickup_loc]]></fieldDescription>
+	</field>
+	<field name="Patron_Type" class="java.lang.String">
+		<fieldDescription><![CDATA[f_p_ptype]]></fieldDescription>
+	</field>
+	<field name="Patron_Phone_Number" class="java.lang.String">
+		<fieldDescription><![CDATA[v_p_phone]]></fieldDescription>
+	</field>
+	<field name="Patron_Phone_Number_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/v_p_phone]]></fieldDescription>
+	</field>
+	<field name="Patron_Record_ID_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/patron_recid]]></fieldDescription>
+	</field>
+	<field name="Patron_Phone2_Number_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/v_p_phone2]]></fieldDescription>
+	</field>
+	<field name="Patron_Phone2_Number" class="java.lang.String">
+		<fieldDescription><![CDATA[v_p_phone2]]></fieldDescription>
+	</field>
+	<field name="Patron_Barcode_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/v_p_barcode]]></fieldDescription>
+	</field>
+	<field name="Patron_Barcode" class="java.lang.String">
+		<fieldDescription><![CDATA[v_p_barcode]]></fieldDescription>
+	</field>
+	<field name="Patron_Code1_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/f_p_pcode1]]></fieldDescription>
+	</field>
+	<field name="Patron_Code2_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/f_p_pcode2]]></fieldDescription>
+	</field>
+	<field name="Patron_Code3_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/f_p_pcode3]]></fieldDescription>
+	</field>
+	<field name="Patron_Code4_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/f_p_pcode4]]></fieldDescription>
+	</field>
+	<field name="Patron_Message_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/v_p_msg]]></fieldDescription>
+	</field>
+	<field name="Patron_Agency_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/f_p_agency]]></fieldDescription>
+	</field>
+	<field name="Patron_Home_Library_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/v_p_home_lib]]></fieldDescription>
+	</field>
+	<field name="Patron_Checked_Out_Number_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/f_p_cur_chkout]]></fieldDescription>
+	</field>
+	<field name="Patron_Type_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/f_p_ptype]]></fieldDescription>
+	</field>
+	<field name="Item_Checked_Out_Location" class="java.lang.String">
+		<fieldDescription><![CDATA[f_i_outloc]]></fieldDescription>
+	</field>
+	<field name="Item_Volume" class="java.lang.String">
+		<fieldDescription><![CDATA[v_vol]]></fieldDescription>
+	</field>
+	<field name="Item_Code1" class="java.lang.String">
+		<fieldDescription><![CDATA[f_i_scat]]></fieldDescription>
+	</field>
+	<field name="Item_Code2" class="java.lang.String">
+		<fieldDescription><![CDATA[f_i_icode]]></fieldDescription>
+	</field>
+	<field name="Item_Type" class="java.lang.String">
+		<fieldDescription><![CDATA[v_i_type]]></fieldDescription>
+	</field>
+	<field name="Item_Material_Type" class="java.lang.String">
+		<fieldDescription><![CDATA[f_b_bcode2]]></fieldDescription>
+	</field>
+	<field name="Item_OPAC_Message" class="java.lang.String">
+		<fieldDescription><![CDATA[f_i_opacmsg]]></fieldDescription>
+	</field>
+	<field name="Item_Agency" class="java.lang.String">
+		<fieldDescription><![CDATA[f_i_agency]]></fieldDescription>
+	</field>
+	<field name="Item_Note" class="java.lang.String">
+		<fieldDescription><![CDATA[v_i_note]]></fieldDescription>
+	</field>
+	<field name="Item_Message" class="java.lang.String">
+		<fieldDescription><![CDATA[f_i_message]]></fieldDescription>
+	</field>
+	<field name="Item_Pickup_Location_Braddr1" class="java.lang.String">
+		<fieldDescription><![CDATA[v_pickup_braddr1]]></fieldDescription>
+	</field>
+	<field name="Item_Pickup_Location_Braddr2" class="java.lang.String">
+		<fieldDescription><![CDATA[v_pickup_braddr2]]></fieldDescription>
+	</field>
+	<field name="Item_Pickup_Location_Braddr3" class="java.lang.String">
+		<fieldDescription><![CDATA[v_pickup_braddr3]]></fieldDescription>
+	</field>
+	<field name="Patron_Address_Line1" class="java.lang.String">
+		<fieldDescription><![CDATA[g_patron_addr1]]></fieldDescription>
+	</field>
+	<field name="Patron_Address_Line2" class="java.lang.String">
+		<fieldDescription><![CDATA[g_patron_addr2]]></fieldDescription>
+	</field>
+	<field name="Patron_Address_Line3" class="java.lang.String">
+		<fieldDescription><![CDATA[g_patron_addr3]]></fieldDescription>
+	</field>
+	<field name="Patron_Code1" class="java.lang.String">
+		<fieldDescription><![CDATA[f_p_pcode1]]></fieldDescription>
+	</field>
+	<field name="Patron_Code2" class="java.lang.String">
+		<fieldDescription><![CDATA[f_p_pcode2]]></fieldDescription>
+	</field>
+	<field name="Patron_Code3" class="java.lang.String">
+		<fieldDescription><![CDATA[f_p_pcode3]]></fieldDescription>
+	</field>
+	<field name="Patron_Code4" class="java.lang.String">
+		<fieldDescription><![CDATA[f_p_pcode4]]></fieldDescription>
+	</field>
+	<field name="Patron_Home_Library" class="java.lang.String">
+		<fieldDescription><![CDATA[v_p_home_lib]]></fieldDescription>
+	</field>
+	<field name="Patron_Record_ID" class="java.lang.String">
+		<fieldDescription><![CDATA[patron_recid]]></fieldDescription>
+	</field>
+	<field name="Patron_Message" class="java.lang.String">
+		<fieldDescription><![CDATA[v_p_msg]]></fieldDescription>
+	</field>
+	<field name="Patron_Agency" class="java.lang.String">
+		<fieldDescription><![CDATA[f_p_agency]]></fieldDescription>
+	</field>
+	<field name="Patron_Checked_Out_Number" class="java.lang.String">
+		<fieldDescription><![CDATA[f_p_cur_chkout]]></fieldDescription>
+	</field>
+	<field name="Item_Total_Checkout" class="java.lang.String">
+		<fieldDescription><![CDATA[f_i_out_stat]]></fieldDescription>
+	</field>
+	<field name="Item_Last_Checkin" class="java.lang.String">
+		<fieldDescription><![CDATA[f_i_lchkin]]></fieldDescription>
+	</field>
+	<field name="Item_In_Location" class="java.lang.String">
+		<fieldDescription><![CDATA[f_i_inloc]]></fieldDescription>
+	</field>
+	<field name="Item_Publish_Date" class="java.lang.String">
+		<fieldDescription><![CDATA[v_b_pub_date]]></fieldDescription>
+	</field>
+	<field name="Message_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/g_msg]]></fieldDescription>
+	</field>
+	<field name="Print_Sequence_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/print_sequence]]></fieldDescription>
+	</field>
+	<field name="Item_Copy_Number" class="java.lang.String">
+		<fieldDescription><![CDATA[f_i_copy_num]]></fieldDescription>
+	</field>
+	<field name="Delivery_Stop" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/delivery_stop]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="209" splitType="Stretch">
+			<image>
+				<reportElement key="image-1" x="69" y="0" width="74" height="42" uuid="7251465f-452b-458e-b397-6696ea8fed98"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<imageExpression class="java.lang.String"><![CDATA["https://catalog.library.ohio.gov/screens/SLO_print_template_logo.png"]]></imageExpression>
+			</image>
+			<textField evaluationTime="Report" pattern="MM/dd/yyyy" isBlankWhenNull="false">
+				<reportElement key="textField" x="341" y="42" width="194" height="16" uuid="2aad6b6b-7d14-444d-ae6d-f261636e48fb"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement key="textField-2" x="69" y="57" width="242" height="22" uuid="642b361c-0c06-4608-ac01-e8dcfb022684"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Patron_Name_C}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-6" x="69" y="79" width="242" height="21" uuid="96180d2a-8262-4ae2-88ee-1a4c623f141b"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Patron_Address_Line1_C}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-7" x="69" y="100" width="242" height="21" uuid="9a7995c6-b722-4bbe-bf9f-408e8564aee3"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Patron_Address_Line2_C}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-8" x="69" y="121" width="242" height="22" uuid="1c7236d2-6c9c-4f05-80cd-f7ed571656a2"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Patron_Address_Line3_C}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-42" mode="Opaque" x="153" y="0" width="145" height="40" backcolor="#CCCCCC" uuid="56344822-72fa-48e4-a50d-9134e70ca6a5"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Paging Slip]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-50" positionType="Float" x="68" y="170" width="467" height="25" uuid="53ed60f1-44df-4ce3-b619-40d11ead9f3f"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Please pull the item below.]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-47" x="69" y="144" width="242" height="22" uuid="699ff05d-f78b-49c2-8991-2600f639cf2b"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Patron_Phone_Number_C}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="9" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="176" splitType="Stretch">
+			<staticText>
+				<reportElement key="staticText-24" stretchType="RelativeToTallestObject" x="68" y="24" width="72" height="20" uuid="8409ad62-17be-497c-870c-c0709b331b65"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[TITLE:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-25" positionType="Float" x="68" y="4" width="72" height="20" uuid="a0aabfce-cfa0-499e-ba1b-84afa26bbd5c"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[AUTHOR:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-26" positionType="Float" x="68" y="44" width="72" height="20" uuid="229370c2-07b3-4622-ab1e-9a64bf467742"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[CALL #: NUMBER:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-27" positionType="Float" x="140" y="44" width="144" height="20" uuid="86c61e9a-23e9-4b3c-917b-630d576281c2"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Item_Call_Number}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-29" x="68" y="128" width="94" height="20" uuid="fd222748-76ed-43ab-b844-706ea17c0fb8"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[PICKUP LOCATION:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-30" x="68" y="64" width="74" height="20" uuid="aab6dbcb-da84-4633-a815-1904821af3a8"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[BARCODE:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-28" x="140" y="64" width="188" height="20" uuid="39fc5661-d59b-4e84-8a7c-a5cd177daffc"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Item_Barcode}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-29" positionType="Float" x="140" y="4" width="395" height="20" uuid="488b5717-f06d-42cc-9ff5-e3db6195b87f"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Item_Author}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement key="textField-30" x="140" y="24" width="395" height="20" uuid="6406a094-0663-47c7-b866-548196a1f798"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Item_Title}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement key="textField-31" positionType="Float" x="171" y="128" width="379" height="20" uuid="f15bfbd3-7532-4473-8d63-5411e554398c"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Item_Pickup_Location}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-39" x="68" y="108" width="72" height="20" uuid="ed34e0da-7b38-42c5-945e-a05be83788d7"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[LOCATION:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-41" x="140" y="108" width="395" height="20" uuid="1eeb60ed-ecb2-4b4b-8911-5f56b82ac40f"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Item_Location}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-45" positionType="FixRelativeToBottom" x="4" y="-215" width="30" height="339" uuid="5a30fbfb-82cf-477c-a80b-6cd2114888eb"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" rotation="Left">
+					<font size="18" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Patron_Name}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement key="textField-46" x="35" y="-216" width="25" height="341" uuid="58cf1c37-d16f-49dc-aef9-4fb6b4a5b316"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement rotation="Left">
+					<font size="18" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Item_Pickup_Location}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement key="textField-48" positionType="Float" x="172" y="149" width="379" height="20" uuid="e54c114f-c413-4c47-86f0-962b914fc61c"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Item_OPAC_Message}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-51" x="69" y="149" width="94" height="20" uuid="498cbf94-a758-45a8-a92a-309588d0bc2b"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[OPAC MSG:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-30" x="68" y="87" width="72" height="20" uuid="fec342bc-94ab-4498-abf5-1cdcfa93b587"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[DUE DATE:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-28" x="140" y="87" width="188" height="20" uuid="80cd2d3b-a40e-4bc0-bbb6-f59cb792b7a8"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Item_Due_Date}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-26" positionType="Float" x="284" y="44" width="72" height="20" uuid="79eadbf2-5021-4169-a11c-809a5b3fbc10"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[COPY:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-27" positionType="Float" x="356" y="44" width="36" height="20" uuid="e27b4047-d574-440a-93a1-b235ab7f649d"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Item_Copy_Number}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-26" positionType="Float" x="392" y="44" width="35" height="20" uuid="da888c50-5124-4667-a56c-831eed4991f4"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[VOL:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-27" positionType="Float" x="427" y="44" width="36" height="20" uuid="e3197323-5b03-47a8-ac73-1262a6640619"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Item_Volume}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="12" splitType="Stretch"/>
+	</pageFooter>
+	<lastPageFooter>
+		<band height="32" splitType="Stretch">
+			<staticText>
+				<reportElement key="staticText-40" x="5" y="11" width="83" height="14" uuid="423c0c25-1a57-468e-ad0c-812a7576f163"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Notice Text #]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-41" x="162" y="11" width="103" height="14" uuid="19ff17e0-42e4-4b16-b3dd-80c3036d5d76"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Print Sequence #]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-42" x="92" y="11" width="61" height="14" uuid="52aaed35-57ef-4043-b4e1-d1e16741ceef"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Text_Number_C}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-43" x="271" y="11" width="70" height="14" uuid="10cd14bb-3c83-4657-9fbd-41dc68e1ec96"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Print_Sequence_C}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-49" x="367" y="11" width="175" height="12" uuid="c4e6d03b-4f64-4263-a6d6-ebd464ffe2bd"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Revised:Jan 2018 dwg]]></text>
+			</staticText>
+		</band>
+	</lastPageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
