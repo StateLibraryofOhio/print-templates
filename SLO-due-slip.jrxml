@@ -266,20 +266,6 @@
 			</staticText>
 		</band>
 	</pageHeader>
-	<columnHeader>
-		<band height="46" splitType="Stretch">
-			<property name="com.jaspersoft.studio.unit.height" value="px"/>
-			<staticText>
-				<reportElement x="20" y="0" width="420" height="46" uuid="4e91635a-36cb-4497-9d8d-1b56c5a0a274">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				</reportElement>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="14" isItalic="true"/>
-				</textElement>
-				<text><![CDATA[Your items have been quarantined a minimum of 96 hours to safeguard against COVID-19.]]></text>
-			</staticText>
-		</band>
-	</columnHeader>
 	<detail>
 		<band height="145" splitType="Stretch">
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -339,7 +325,7 @@
 				<textElement textAlignment="Center" verticalAlignment="Top" markup="html">
 					<font fontName="SansSerif" size="14"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{Patron_Type_C}.contains("State Government")?"<p>State Library staff have handled your materials while wearing proper safety PPE. You may return your items to the Book Drop located in the State Library parking lot - 24/7.<br><br>State employees can return their items through interdepartmental mail.<br><br>We continue to work remotely, but we're still here to help! Should you need assistance, visit our <a href=\"https://library.ohio.gov/\">website</a> or email us at <a href=\"mailto:circhelp@library.ohio.gov\">circhelp@library.ohio.gov.</p>":"<p>State Library staff have handled your materials while wearing proper safety PPE. You may return your items to the Book Drop located in the State Library parking lot - 24/7.<br><br>We continue to work remotely, but we're still here to help! Should you need assistance, visit our <a href=\"https://library.ohio.gov/\">website</a> or email us at <a href=\"mailto:circhelp@library.ohio.gov\">circhelp@library.ohio.gov.</p>"]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{Patron_Type_C}.contains("State Government")?"<p>You may return your items to the Book Drop located in the State Library parking lot - 24/7.<br><br>State employees can return their items through interdepartmental mail.<br><br>We continue to work remotely, but we're still here to help! Should you need assistance, visit our <a href=\"https://library.ohio.gov/\">website</a> or email us at <a href=\"mailto:circhelp@library.ohio.gov\">circhelp@library.ohio.gov.</p>":"<p>You may return your items to the Book Drop located in the State Library parking lot - 24/7.<br><br>We continue to work remotely, but we're still here to help! Should you need assistance, visit our <a href=\"https://library.ohio.gov/\">website</a> or email us at <a href=\"mailto:circhelp@library.ohio.gov\">circhelp@library.ohio.gov.</p>"]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
