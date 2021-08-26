@@ -198,12 +198,12 @@
 					<font fontName="Courier New" size="11" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[($F{itemFix79}.equals ("slcl ") ? "DICKMAN\n" : "") +
-					($F{itemFix79}.equals ("osd  ") ? "DEAF\n" : "") +
-					($F{itemFix79}.equals ("slctr") ? "CTRO\n" : "") +
-					($F{itemFix79}.equals ("slrr ") ? "REFERENCE\n" : "") +
-					($F{itemFix79}.equals ("slrs ") ? "REFERENCE\n" : "") +
-					($F{itemFix79}.equals ("sdj  ") ? "BWC\n" : "") +
-					($F{itemFix79}.equals ("sdjr ") ? "BWC REF\n" : "") +
+					($F{itemFix79}.equals("osd  ") ? "DEAF\n" : "") +
+					($F{itemFix79}.equals("slctr") ? "CTRO\n" : "") +
+					($F{itemFix79}.equals("slrr ") ? "REFERENCE\n" : "") +
+					($F{itemFix79}.equals("slrs ") ? "REFERENCE\n" : "") +
+					($F{itemFix79}.equals("sdj  ") ? "BWC\n" : "") +
+					($F{itemFix79}.equals("sdjr ") ? "BWC REF\n" : "") +
 					$F{callAlphaStart}.trim() +
 					($F{callAlphaStart}.equals("") ? "" : "\n") +
 					$F{callNumericAll}.trim() +
@@ -214,7 +214,8 @@
 					($F{callSubb}.matches("(?s)[A-Z].*") ? ($F{callSuba}.matches("(?s)[A-Z].*") ? ($F{callSuba}.matches(".* .*") ? "." : "") : ($F{callSuba}.matches(".*\\..*") ? "" : ".")) : "") +
 					$F{callSubb}.trim().replaceAll("\\s","\n").replaceAll("\\.\\s",".").replaceAll(",\\s","\n").replaceAll("\\smaj\\."," maj.\n").replaceAll("\\smin\\."," min.\n") +
 					($F{callSubb}.equals("") ? "" : "\n") +
-					$F{itemv}.trim().replaceAll("[ :]","\n").replaceAll("\\.\\s",".").replaceAll(",\\s","\n")]]></textFieldExpression>
+					$F{itemv}.trim().replaceAll("[ :]","\n").replaceAll("\\.\\s",".").replaceAll(",\\s","\n") +
+                    ($F{itemFix58}.equals("0") || $F{itemFix58}.equals("1") ? "" : $F{itemFix58c})]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
