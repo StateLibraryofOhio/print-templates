@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.10.0.final using JasperReports Library version 6.10.0-unknown  -->
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="LC Label" pageWidth="72" pageHeight="108" columnWidth="64" leftMargin="4" rightMargin="4" topMargin="9" bottomMargin="6" uuid="94776256-88bf-4223-a9cb-770a44ad806c">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="LC Label" pageWidth="72" pageHeight="108" columnWidth="64" leftMargin="4" rightMargin="4" topMargin="9" bottomMargin="6" uuid="94776256-88bf-4223-a9cb-770a44ad806c" language="groovy">
 	<property name="ireport.scriptlethandling" value="0"/>
 	<property name="ireport.encoding" value="UTF-8"/>
 	<property name="ireport.zoom" value="1.0"/>
@@ -202,6 +202,7 @@
 					($F{itemFix79}.equals("slctr") ? "CTRO\n" : "") +
 					($F{itemFix79}.equals("slrr ") ? "REFERENCE\n" : "") +
 					($F{itemFix79}.equals("slrs ") ? "REFERENCE\n" : "") +
+					($F{itemFix79}.equals("slsu ") ? "UNUSUAL\n" : "") +
 					($F{itemFix79}.equals("sdj  ") ? "BWC\n" : "") +
 					($F{itemFix79}.equals("sdjr ") ? "BWC REF\n" : "") +
 					$F{callAlphaStart}.trim() +
