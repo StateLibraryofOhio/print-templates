@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Hold Pickup Notice" pageWidth="500" pageHeight="750" columnWidth="480" leftMargin="10" rightMargin="10" topMargin="10" bottomMargin="10" isIgnorePagination="true">
+<!-- Created with Jaspersoft Studio version 6.5.0.final using JasperReports Library version 6.5.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Hold Pickup Notice" pageWidth="500" pageHeight="750" columnWidth="480" leftMargin="10" rightMargin="10" topMargin="10" bottomMargin="10" isIgnorePagination="true" uuid="2bc5b901-bca1-4e6a-bc22-d3da1ae271e3">
 	<property name="ireport.scriptlethandling" value="0"/>
 	<property name="ireport.encoding" value="UTF-8"/>
 	<property name="ireport.zoom" value="1.5"/>
@@ -15,7 +16,7 @@
 	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
 	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
-	<property name="net.sf.jasperreports.export.html.header" value="&lt;head&gt;&lt;style&gt;table p { margin: 0; } table { width: 90% !important; max-width: 800px !important; table-layout: auto !important; } table tr { vertical-align: middle !important; }&lt;/style&gt;&lt;/head&gt;"/>
+	<property name="net.sf.jasperreports.export.html.header" value="&lt;head&gt;&lt;style&gt;table p { margin: 0; } table { width: 90% !important; max-width: 660px !important; table-layout: auto !important;}&lt;/style&gt;&lt;/head&gt;"/>
 	<property name="net.sf.jasperreports.export.html.size.unit" value="pt"/>
 	<property name="net.sf.jasperreports.export.html.border.collapse" value="collapse"/>
 	<import value="java.util.*"/>
@@ -253,7 +254,8 @@
 	</field>
 	<sortField name="Item_Due_Date"/>
 	<title>
-		<band height="197" splitType="Stretch">
+		<band height="230" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<textField pattern="" isBlankWhenNull="true">
 				<reportElement key="textField-2" x="0" y="120" width="460" height="20" uuid="1454d0de-363e-4d2d-85be-b4ec89455cb2"/>
 				<box>
@@ -268,18 +270,21 @@
 				<textFieldExpression><![CDATA[($F{Patron_Name_C} != null ? $F{Patron_Name_C}.indexOf(',')>0 ? $F{Patron_Name_C}.substring($F{Patron_Name_C}.indexOf(',')+2) + " " + $F{Patron_Name_C}.substring(0,$F{Patron_Name_C}.indexOf(',')) : $F{Patron_Name_C} : "") + ","]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement x="0" y="145" width="460" height="47" uuid="a6833052-6951-459a-836b-7d64b9acf60d"/>
+				<reportElement x="0" y="140" width="460" height="85" uuid="a6833052-6951-459a-836b-7d64b9acf60d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
 				<textElement>
 					<font size="12" isItalic="false"/>
 				</textElement>
-				<textFieldExpression><![CDATA["The following items are ready for pickup. If you selected State Employee - Mail as your pick-up location, the item has been received and is now being sent to your work address. Otherwise, items will be held at the Circulation Desk for ten (10) days. Please contact the Circulation Department at (614) 644-6950 if you no longer want an item. "]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{Item_Pickup_Location}.equals("State Library - Circ Desk")?"The following items are ready for pickup at the State Library of Ohio. Items will be held at the Circulation Desk for ten (10) days. Please contact the Circulation Department at (614) 644-6950 if you no longer want an item.":$F{Item_Pickup_Location}.equals("State Employee - Office Delivery")?"The following items have been received by the State Library and will be mailed to your work address soon. If you have questions or no longer need an item, feel free to respond to this email or call (614) 644-6950.":"The following items are ready for you to pick up at the location listed below. Please contact the library for information on current pickup procedures."]]></textFieldExpression>
 			</textField>
 			<image isLazy="true" hyperlinkType="Reference" hyperlinkTarget="Blank">
 				<reportElement isPrintRepeatedValues="false" x="0" y="1" width="111" height="111" uuid="0615115f-98df-4a5a-bdbf-d3382f10aca1">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
-				<imageExpression class="java.lang.String"><![CDATA["https://catalog.library.ohio.gov/screens/SLO_print_template_logo.png"]]></imageExpression>
+				<imageExpression><![CDATA["https://catalog.library.ohio.gov/screens/SLO_print_template_logo.png"]]></imageExpression>
 				<hyperlinkReferenceExpression><![CDATA["https://library.ohio.gov/"]]></hyperlinkReferenceExpression>
 			</image>
 		</band>
@@ -411,4 +416,19 @@
 			</textField>
 		</band>
 	</detail>
+	<pageFooter>
+		<band height="35">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement x="0" y="11" width="480" height="20" uuid="36391eb1-166a-4794-96cd-465e3831c3fb"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[State Library of Ohio, 274 E. 1st Avenue, Suite #100, Columbus, OH 43201]]></text>
+			</staticText>
+			<line>
+				<reportElement mode="Opaque" x="45" y="5" width="390" height="1" uuid="93011135-2eca-42fb-a87e-77f970d1144f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+		</band>
+	</pageFooter>
 </jasperReport>
