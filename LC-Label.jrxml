@@ -200,6 +200,7 @@
 				<textFieldExpression><![CDATA[($F{itemFix79}.equals ("slcl ") ? "DICKMAN\n" : "") +
 					($F{itemFix79}.equals("osd  ") ? "DEAF\n" : "") +
 					($F{itemFix79}.equals("slctr") ? "CTRO\n" : "") +
+					($F{itemFix79}.equals("slr  ") ? "REFERENCE\n" : "") +
 					($F{itemFix79}.equals("slrr ") ? "REFERENCE\n" : "") +
 					($F{itemFix79}.equals("slrs ") ? "REFERENCE\n" : "") +
 					($F{itemFix79}.equals("slsu ") ? "UNUSUAL\n" : "") +
