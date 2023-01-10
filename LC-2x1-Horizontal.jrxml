@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.10.0.final using JasperReports Library version 6.10.0-unknown  -->
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="LC Label" language="groovy" pageWidth="153" pageHeight="81" columnWidth="133" leftMargin="10" rightMargin="10" topMargin="12" bottomMargin="12" uuid="94776256-88bf-4223-a9cb-770a44ad806c">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="LC Label" language="groovy" pageWidth="153" pageHeight="81" columnWidth="133" leftMargin="10" rightMargin="8" topMargin="12" bottomMargin="12" uuid="94776256-88bf-4223-a9cb-770a44ad806c">
 	<property name="ireport.scriptlethandling" value="0"/>
 	<property name="ireport.encoding" value="UTF-8"/>
 	<property name="ireport.zoom" value="1.0"/>
@@ -186,7 +186,7 @@
 		<band height="57" splitType="Stretch">
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<textField isBlankWhenNull="false">
-				<reportElement key="textField" x="0" y="0" width="133" height="57" uuid="636a37f8-3208-4723-9a07-0bcd3e2ee935"/>
+				<reportElement key="textField" x="0" y="0" width="133" height="59" uuid="636a37f8-3208-4723-9a07-0bcd3e2ee935"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
